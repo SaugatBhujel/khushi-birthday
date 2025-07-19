@@ -1,0 +1,12 @@
+[build]
+base = ""
+dir = ""
+command = ""
+
+[build.environment]
+CONTEXT = "production"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

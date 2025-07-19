@@ -1,0 +1,9 @@
+type: static-site
+name: birthday-website
+buildCommand: echo "No build needed for static site"
+publish: .
+env:
+  - name: RENDER_GIT_REPO
+    value: "https://github.com/yourusername/birthday-website.git"
+  - name: RENDER_GIT_BRANCH
+    value: "main"
