@@ -123,8 +123,9 @@
 <body>
     <div class="landing-container">
         <div class="video-container">
-            <video autoplay muted loop id="myVideo">
-                <source src="/videos/our-story.mp4" type="video/mp4">
+            <video autoplay muted loop id="myVideo" onerror="handleVideoError()">
+                <source src="videos/our-story.mp4" type="video/mp4">
+                <source src="videos/our-story.webm" type="video/webm">
                 Your browser does not support HTML5 video.
             </video>
         </div>
@@ -146,6 +147,29 @@
         continueBtn.disabled = false;
         continueBtn.style.opacity = '1';
         continueBtn.style.cursor = 'pointer';
+
+        // Video error handling
+        function handleVideoError() {
+            console.error('Video failed to load');
+            // Remove video container if it fails to load
+            const videoContainer = document.querySelector('.video-container');
+            if (videoContainer) {
+                videoContainer.style.display = 'none';
+            }
+            // Show a message
+            const message = document.createElement('div');
+            message.style.textAlign = 'center';
+            message.style.color = 'var(--landing-secondary)';
+            message.style.margin = '20px 0';
+            message.textContent = 'Video not available. Enjoy the celebration! 🎉';
+            document.querySelector('.landing-container').insertBefore(message, document.querySelector('.countdown-container'));
+        }
+
+        // Check if video is loaded
+        const video = document.getElementById('myVideo');
+        if (video) {
+            video.addEventListener('error', handleVideoError);
+        }
 
         // Continue to main page
         function continueToMain() {
