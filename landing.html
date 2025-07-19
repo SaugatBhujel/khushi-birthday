@@ -168,6 +168,20 @@
             document.getElementById('hours').textContent = hours;
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
+
+            // Update button state based on date
+            const continueBtn = document.querySelector('.continue-btn');
+            if (now < targetDate) {
+                continueBtn.disabled = true;
+                continueBtn.style.opacity = '0.5';
+                continueBtn.style.cursor = 'not-allowed';
+                continueBtn.textContent = 'Available on July 20';
+            } else {
+                continueBtn.disabled = false;
+                continueBtn.style.opacity = '1';
+                continueBtn.style.cursor = 'pointer';
+                continueBtn.textContent = 'Continue to Birthday Surprise';
+            }
         }
 
         // Update countdown every second
