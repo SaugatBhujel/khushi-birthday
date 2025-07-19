@@ -136,6 +136,75 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Simple fireworks animation
+        class Firework {
+            constructor() {
+                this.canvas = document.createElement('canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                document.body.insertBefore(this.canvas, document.body.firstChild);
+                this.particles = [];
+                this.init();
+            }
+
+            init() {
+                this.animate();
+                window.addEventListener('resize', () => {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                });
+            }
+
+            createFirework() {
+                const x = Math.random() * this.canvas.width;
+                const y = this.canvas.height;
+                const particle = {
+                    x,
+                    y,
+                    vx: Math.random() * 10 - 5,
+                    vy: -Math.random() * 15 - 5,
+                    size: Math.random() * 5 + 2,
+                    color: `hsl(${Math.random() * 360}, 100%, 50%)`
+                };
+                this.particles.push(particle);
+            }
+
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Create new fireworks periodically
+                if (Math.random() < 0.05) {
+                    this.createFirework();
+                }
+
+                // Update and draw particles
+                for (let i = this.particles.length - 1; i >= 0; i--) {
+                    const particle = this.particles[i];
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    particle.vy += 0.2; // Gravity
+
+                    this.ctx.beginPath();
+                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    this.ctx.fillStyle = particle.color;
+                    this.ctx.fill();
+
+                    // Remove particles that are off screen
+                    if (particle.y > this.canvas.height || particle.size < 0.1) {
+                        this.particles.splice(i, 1);
+                    }
+                }
+
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+
+        // Start the fireworks when the page loads
+        window.addEventListener('load', () => {
+            new Firework();
+        });
+    </script>
 </body>
 </html>
