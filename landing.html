@@ -132,20 +132,8 @@
 
         <div class="countdown-container">
             <div class="countdown-box">
-                <span id="days">0</span>
-                <small>Days</small>
-            </div>
-            <div class="countdown-box">
-                <span id="hours">0</span>
-                <small>Hours</small>
-            </div>
-            <div class="countdown-box">
-                <span id="minutes">0</span>
-                <small>Minutes</small>
-            </div>
-            <div class="countdown-box">
-                <span id="seconds">0</span>
-                <small>Seconds</small>
+                <span>🎉 Happy Birthday! 🎉</span>
+                <small>It's your special day!</small>
             </div>
         </div>
 
@@ -153,40 +141,11 @@
     </div>
 
     <script>
-        // Countdown timer
-        function updateCountdown() {
-            const now = new Date();
-            const targetDate = new Date('2025-07-20T00:00:00');
-            const diff = targetDate - now;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-
-            // Update button state based on date
-            const continueBtn = document.querySelector('.continue-btn');
-            if (now < targetDate) {
-                continueBtn.disabled = true;
-                continueBtn.style.opacity = '0.5';
-                continueBtn.style.cursor = 'not-allowed';
-                continueBtn.textContent = 'Available on July 20';
-            } else {
-                continueBtn.disabled = false;
-                continueBtn.style.opacity = '1';
-                continueBtn.style.cursor = 'pointer';
-                continueBtn.textContent = 'Continue to Birthday Surprise';
-            }
-        }
-
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        // Initialize button as enabled since it's July 20
+        const continueBtn = document.querySelector('.continue-btn');
+        continueBtn.disabled = false;
+        continueBtn.style.opacity = '1';
+        continueBtn.style.cursor = 'pointer';
 
         // Continue to main page
         function continueToMain() {
