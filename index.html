@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="loading-screen">
+    <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <h1>🎉 Happy Birthday!</h1>
             <div class="celebration-effects">
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="main-content hidden">
+    <div class="main-content" id="mainContent">
         <header>
             <h2 class="floating-text">Happy Birthday!</h2>
             <p class="date">20th July 2025</p>
@@ -137,6 +137,24 @@
     </div>
 
     <script>
+        // Loading screen handling
+        function handleLoading() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const mainContent = document.getElementById('mainContent');
+            
+            // Remove hidden class from main content
+            mainContent.classList.remove('hidden');
+            
+            // Add fade-out animation to loading screen
+            loadingScreen.style.transition = 'opacity 0.5s ease-in-out';
+            loadingScreen.style.opacity = '0';
+            
+            // Remove loading screen after animation
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+
         // Simple fireworks animation
         class Firework {
             constructor() {
@@ -201,9 +219,10 @@
             }
         }
 
-        // Start the fireworks when the page loads
+        // Start the fireworks and handle loading when the page loads
         window.addEventListener('load', () => {
             new Firework();
+            handleLoading();
         });
     </script>
 </body>
