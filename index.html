@@ -32,8 +32,32 @@
     <div class="main-content" id="mainContent">
         <header>
             <h2 class="floating-text">Happy Birthday!</h2>
-            <p class="date">20th July 2025</p>
-        </header>
+            <div class="current-year-section">
+                <p class="date">20th July 2025</p>
+                <p class="celebration-message">🎉 Happy Birthday Khushi! 🎉</p>
+                <p class="celebration-message">We celebrated your special day together!</p>
+            </div>
+            <div class="next-year-section">
+                <h3>Next Birthday Countdown</h3>
+                <div class="countdown-container">
+                    <div class="countdown-box">
+                        <span id="days">365</span>
+                        <small>Days</small>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours">23</span>
+                        <small>Hours</small>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes">59</span>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds">59</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
 
         <main>
             <!-- Personal Message Section -->
@@ -153,6 +177,9 @@
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 500);
+
+            // Initialize next year countdown
+            updateCountdown();
         }
 
         // Simple fireworks animation
@@ -217,6 +244,26 @@
 
                 requestAnimationFrame(() => this.animate());
             }
+        }
+
+        // Next year countdown
+        function updateCountdown() {
+            const now = new Date();
+            const nextBirthday = new Date('2026-07-20T00:00:00');
+            const diff = nextBirthday - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            // Update every second
+            setTimeout(updateCountdown, 1000);
         }
 
         // Start the fireworks and handle loading when the page loads

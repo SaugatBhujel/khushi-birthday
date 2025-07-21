@@ -69,10 +69,68 @@ body {
 .main-content {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .main-content:not(.hidden) {
     opacity: 1;
+}
+
+/* Current Year Section */
+.current-year-section {
+    margin-bottom: 3rem;
+}
+
+.celebration-message {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+/* Next Year Countdown Section */
+.next-year-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.next-year-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.countdown-box {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 80px;
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-box small {
+    display: block;
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 /* Falling Love Emojis Container */
