@@ -2,6 +2,7 @@
     --primary-color: #ff6b6b;
     --text-color: #333;
     --light-bg: #fff;
+    --dark-bg: #1a1a1a;
 }
 
 * {
@@ -16,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #333;
     line-height: 1.6;
-    background: #f0f0f0;
+    background: var(--dark-bg);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,28 +27,37 @@ body {
 
 .countdown-container {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
 .countdown-box {
-    background: var(--primary-color);
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
-    min-width: 80px;
+    min-width: 100px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .countdown-box span {
     display: block;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
 
 .countdown-box small {
     display: block;
-    font-size: 1rem;
-    opacity: 0.8;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    color: white;
 }
 
 /* Falling Love Emojis Container */
