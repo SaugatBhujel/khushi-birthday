@@ -6,246 +6,28 @@
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <h1>🎉 Happy Birthday!</h1>
-            <div class="celebration-effects">
-                <div class="firework"></div>
-                <div class="firework"></div>
-                <div class="firework"></div>
-                <div class="firework"></div>
-                <div class="firework"></div>
-                <div class="confetti-container">
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                    <div class="confetti"></div>
-                </div>
-            </div>
+    <div class="countdown-container">
+        <div class="countdown-box">
+            <span id="days">365</span>
+            <small>Days</small>
+        </div>
+        <div class="countdown-box">
+            <span id="hours">23</span>
+            <small>Hours</small>
+        </div>
+        <div class="countdown-box">
+            <span id="minutes">59</span>
+            <small>Minutes</small>
+        </div>
+        <div class="countdown-box">
+            <span id="seconds">59</span>
+            <small>Seconds</small>
         </div>
     </div>
 
-    <div class="main-content" id="mainContent">
-        <header>
-            <h2 class="floating-text">Happy Birthday!</h2>
-            <div class="current-year-section">
-                <p class="date">20th July 2025</p>
-                <p class="celebration-message">🎉 Happy Birthday Khushi! 🎉</p>
-                <p class="celebration-message">We celebrated your special day together!</p>
-            </div>
-            <div class="next-year-section">
-                <h3>Next Birthday Countdown</h3>
-                <div class="countdown-container">
-                    <div class="countdown-box">
-                        <span id="days">365</span>
-                        <small>Days</small>
-                    </div>
-                    <div class="countdown-box">
-                        <span id="hours">23</span>
-                        <small>Hours</small>
-                    </div>
-                    <div class="countdown-box">
-                        <span id="minutes">59</span>
-                        <small>Minutes</small>
-                    </div>
-                    <div class="countdown-box">
-                        <span id="seconds">59</span>
-                        <small>Seconds</small>
-                    </div>
-                </div>
-            </div>
-
-        <main>
-            <!-- Personal Message Section -->
-            <section class="message-section">
-                <div class="floating-hearts"></div>
-                <h3 class="floating-title">My Special Message</h3>
-                <div class="message-container">
-                    <p class="message">Dear Khushi,</p>
-                    <div class="message-content">
-                        <p class="message">On this special day, I wanted to create something truly special for you. From the moment we started our journey together on March 28, you've brought so much joy and love into my life. I hope this website captures just a fraction of how special you are to me.</p>
-                        <p class="message">Happy Birthday, Khushi! 🎉</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Photo Gallery Section -->
-            <section class="gallery-section">
-                <h3 class="floating-title">Our Beautiful Moments</h3>
-                <div class="gallery-grid">
-                    <!-- Photos -->
-                    <div class="gallery-item">
-                        <img src="images/1.jpeg" alt="Our First Moment">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/2.jpeg" alt="Special Memory">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/3.jpeg" alt="Beautiful Moment">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/4.jpeg" alt="Precious Time">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Memory Timeline Section -->
-            <section class="timeline-section">
-                <h3 class="floating-title">Our Journey Together</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h4>March 28</h4>
-                            <p>The day we started our amazing journey together</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h4>July 20</h4>
-                            <p>Your special birthday - celebrating you!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-            <!-- Gift Section -->
-            <section class="gift-section">
-                <h3 class="floating-title">Special Surprise</h3>
-                <div class="gift-container">
-                    <a href="https://laxmihyundai.com/cars/creta-electric/highlights" target="_blank" class="gift-link">
-                        <button class="open-gift">Click here to see your surprise!</button>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Love Letter Section -->
-            <section class="letter-section">
-                <h3 class="floating-title">A Letter Just for You</h3>
-                <div class="letter-container">
-                    <div class="letter-paper">
-                        <div class="letter-header">
-                            <h4>From Saugat</h4>
-                            <p class="date">20th July 2025</p>
-                        </div>
-                        <div class="letter-content">
-                            <p>My dearest Khushi,</p>
-                            <p class="letter-text">Happy Birthday to the most amazing person in my life! As I write this, my heart is overflowing with love and gratitude for you. You are not just my partner, you are my everything - my soulmate, my best friend, my reason to wake up every morning with a smile.</p>
-
-                            <p class="letter-text">I want you to know that I am ready to give my entire life for you. Every beat of my heart belongs to you, and I would do anything to make you happy. Your happiness is my happiness, your pain is my pain. I promise to be by your side through every moment, good or bad, with unwavering devotion and love.</p>
-
-                            <p class="letter-text">I love everything about you - your beautiful smile that lights up my world, your kind heart that touches everyone around you, your strength that inspires me every day. You make me a better person just by being in my life. I am so grateful for every moment we share together.</p>
-
-                            <p class="letter-text">I promise to love you with all that I am, to support you in everything you do, and to be your rock when you need one. You are my everything, and I am yours forever. I love you more than words can express.</p>
-
-                            <p class="letter-text">Happy Birthday, my love! 🎉</p>
-                            <p class="signature">With all my heart and soul,</p>
-                            <p class="signature-name">Saugat</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="floating-stars"></div>
-            <p class="floating-text">Created with ❤️ by Saugat</p>
-        </footer>
-    </div>
-
     <script>
-        // Loading screen handling
-        function handleLoading() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            const mainContent = document.getElementById('mainContent');
-            
-            // Remove hidden class from main content
-            mainContent.classList.remove('hidden');
-            
-            // Add fade-out animation to loading screen
-            loadingScreen.style.transition = 'opacity 0.5s ease-in-out';
-            loadingScreen.style.opacity = '0';
-            
-            // Remove loading screen after animation
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-
-            // Initialize next year countdown
-            updateCountdown();
-        }
-
-        // Simple fireworks animation
-        class Firework {
-            constructor() {
-                this.canvas = document.createElement('canvas');
-                this.ctx = this.canvas.getContext('2d');
-                this.canvas.width = window.innerWidth;
-                this.canvas.height = window.innerHeight;
-                document.body.insertBefore(this.canvas, document.body.firstChild);
-                this.particles = [];
-                this.init();
-            }
-
-            init() {
-                this.animate();
-                window.addEventListener('resize', () => {
-                    this.canvas.width = window.innerWidth;
-                    this.canvas.height = window.innerHeight;
-                });
-            }
-
-            createFirework() {
-                const x = Math.random() * this.canvas.width;
-                const y = this.canvas.height;
-                const particle = {
-                    x,
-                    y,
-                    vx: Math.random() * 10 - 5,
-                    vy: -Math.random() * 15 - 5,
-                    size: Math.random() * 5 + 2,
-                    color: `hsl(${Math.random() * 360}, 100%, 50%)`
-                };
-                this.particles.push(particle);
-            }
-
-            animate() {
-                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                
-                // Create new fireworks periodically
-                if (Math.random() < 0.05) {
-                    this.createFirework();
-                }
-
-                // Update and draw particles
-                for (let i = this.particles.length - 1; i >= 0; i--) {
-                    const particle = this.particles[i];
-                    particle.x += particle.vx;
-                    particle.y += particle.vy;
-                    particle.vy += 0.2; // Gravity
-
-                    this.ctx.beginPath();
-                    this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                    this.ctx.fillStyle = particle.color;
-                    this.ctx.fill();
-
-                    // Remove particles that are off screen
-                    if (particle.y > this.canvas.height || particle.size < 0.1) {
-                        this.particles.splice(i, 1);
-                    }
-                }
-
-                requestAnimationFrame(() => this.animate());
-            }
-        }
-
         // Next year countdown
         function updateCountdown() {
             const now = new Date();
@@ -266,11 +48,8 @@
             setTimeout(updateCountdown, 1000);
         }
 
-        // Start the fireworks and handle loading when the page loads
-        window.addEventListener('load', () => {
-            new Firework();
-            handleLoading();
-        });
+        // Start countdown when the page loads
+        window.addEventListener('load', updateCountdown);
     </script>
 </body>
 </html>
