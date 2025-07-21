@@ -47,17 +47,24 @@ body {
 
 .countdown-box span {
     display: block;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
     color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-box small {
     display: block;
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 1;
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--primary-color), rgba(255, 107, 107, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Falling Love Emojis Container */
